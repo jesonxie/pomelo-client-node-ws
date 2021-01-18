@@ -51,3 +51,23 @@ pomelo.on('__CLIENT_ROUTE', (route, data) => {
     console.log(data);
 });
 ```
+
+## API
+
+### client.init( prams, cb)
+prams 参数
+- host：string，需要连接的 connector 的 ip，如 '127.0.0.1'  
+- port：int，需要连接的 connector 的端口号，如 6001  
+- scheme，可选，string，协议类型，如 ws、wss。默认 ws  
+- encode，可选，function，加密数据函数，默认官方的加密  
+- decode，可选，function，解密数据函数，默认官方的解密
+- user，可选  
+- encrypt，可选，boolean，默认 false。  
+- handshakeCallback，可选，默认 无。  
+- maxReconnectAttempts，boolean，断线后最大自动重连次数，默认10次。  
+- reconnect，可选，boolean，断线后是否自动重连，默认 false。
+  
+### client.request( route, msg, cb)
+- route：string，请求的服务器接口  
+- msg：Object，请求的参数，{ x : x , y : y }  
+- cb：function，响应的回调函数
