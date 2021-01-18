@@ -66,8 +66,8 @@ prams 参数
 - handshakeCallback，可选，默认 无。  
 - maxReconnectAttempts，boolean，断线后最大自动重连次数，默认10次。  
 - reconnect，可选，boolean，断线后是否自动重连，默认 false。
-  
-### client.request( route, msg, cb)
+
+### client.request( route, msg, cb)
 - route：string，请求的服务器接口  
 - msg：Object，请求的参数，{ x : x , y : y }  
 - cb：function，响应的回调函数
